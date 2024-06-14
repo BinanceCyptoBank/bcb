@@ -1739,7 +1739,7 @@ function intervalTiming() {
         function getTimeFormat(time){
             var timeSplit = time.split(":");
             var timeNumber = Number(timeSplit[0])
-            if (timeNumber > 12) {
+            if (timeNumber >= 12) {
                 var timeWrap = timeNumber - 12
                 var timeDisplay = `${timeWrap}:${timeSplit[1]} PM`;
                 return timeDisplay;
@@ -1984,8 +1984,18 @@ function intervalTiming() {
                         `;
                     }
                 }
-                // 
-                document.getElementById("bio-auth-conversation-container").innerHTML = commentPrint;
+                // // 
+                if(commentDatabase === null){
+                    document.getElementById("bio-auth-conversation-container").innerHTML = `
+                        <div class="hmepg-token-img-txt one-line">No comments on this post yet.</div>
+                        <!-- Images -->
+                        <div class="community-comment-display-img">
+                            <img src="svg/binance.svg" class="img-fluid">
+                        </div>
+                    `;
+                } else if(commentDatabase !== null){
+                    document.getElementById("bio-auth-conversation-container").innerHTML = commentPrint;
+                }
             })
             // Display Comment container per Date
             var chatDisplayDate = document.getElementsByClassName("comment-client-datedisplay");
@@ -2017,7 +2027,18 @@ function intervalTiming() {
             var commentCount = document.getElementsByClassName("comment-count-class").length;
             document.getElementById("comment-count-number").innerHTML = `${nFormatter(Number(commentCount))}`;
             var viewNumber = Number(commentCount) * Number(numberViews);
-            document.getElementById("view-count-number").innerHTML = `${nFormatter(viewNumber)}`;
+            if(commentCount === 0){
+                document.getElementById("bio-auth-conversation-container").innerHTML = `
+                    <div class="hmepg-token-img-txt one-line">No comments on this post yet.</div>
+                    <!-- Images -->
+                    <div class="community-comment-display-img">
+                        <img src="svg/binance.svg" class="img-fluid">
+                    </div>
+                `;
+                document.getElementById("view-count-number").innerHTML = `${Number(numberViews)}`
+            } else{
+                document.getElementById("view-count-number").innerHTML = `${nFormatter(viewNumber)}`;
+            }
             // Set interval for part 2
             setInterval(() => {
                 // Display Comment container per Date
@@ -2050,7 +2071,18 @@ function intervalTiming() {
                 var commentCount = document.getElementsByClassName("comment-count-class").length;
                 document.getElementById("comment-count-number").innerHTML = `${nFormatter(Number(commentCount))}`;
                 var viewNumber = Number(commentCount) * Number(numberViews);
-                document.getElementById("view-count-number").innerHTML = `${nFormatter(viewNumber)}`;
+                if(commentCount === 0){
+                    document.getElementById("bio-auth-conversation-container").innerHTML = `
+                        <div class="hmepg-token-img-txt one-line">No comments on this post yet.</div>
+                        <!-- Images -->
+                        <div class="community-comment-display-img">
+                            <img src="svg/binance.svg" class="img-fluid">
+                        </div>
+                    `;
+                    document.getElementById("view-count-number").innerHTML = `${Number(numberViews)}`
+                } else{
+                    document.getElementById("view-count-number").innerHTML = `${nFormatter(viewNumber)}`;
+                }
             }, 1000);
             
             CommunityToChat();

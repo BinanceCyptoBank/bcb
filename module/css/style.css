@@ -5383,6 +5383,14 @@
 		padding: 1em 0;
 		width: 100%;
 	}
+    .community-comment-display-img{
+        display: flex;
+        opacity: 0.35;
+        margin: auto;
+        margin-top: 2.5em;
+        height: 5.5em;
+        width: 5.5em;
+    }
 
     /* Svroll button */
     .scroll-chat-button {

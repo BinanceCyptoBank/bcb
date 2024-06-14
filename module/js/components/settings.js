@@ -53,7 +53,7 @@ class Settings extends HTMLElement{
                                     <!-- Token image container -->
                                     <div class="settings-img-wrap">
                                         <div class="settings-img">
-                                            <img src="svg/totalAsset.svg" class="img-fluid">
+                                            <img src="svg/totalasset.svg" class="img-fluid">
                                         </div>
                                     </div>		
                                     <!-- Token container -->
@@ -223,7 +223,7 @@ class Settings extends HTMLElement{
                                     <!-- Token image container -->
                                     <div class="settings-img-wrap">
                                         <div class="settings-img">
-                                            <img src="svg/helpAndSupport.svg" class="img-fluid">
+                                            <img src="svg/helpandsupport.svg" class="img-fluid">
                                         </div>
                                     </div>		
                                     <!-- Token container -->
