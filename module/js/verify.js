@@ -2156,6 +2156,9 @@ function intervalTiming() {
     function clientDeleteDisplayAbsolute() {
         document.getElementById("client-delete-con").style.display = "flex";
         document.getElementById("client-comment-notify").style.display = "none";
+        setTimeout(function(){
+            document.getElementById("client-delete-con").style.display = "none";
+        }, 9000);
     }
     function clientDeleteAbsolute() {
         document.getElementById("client-delete-con").style.display = "none";
