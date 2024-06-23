@@ -2,6 +2,15 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+// 
+function menucirlenotification() {
+    document.getElementById("menuNotifyDisplay").style.display = "flex";
+    document.getElementById("onlineChatDisplay").style.display = "flex";
+    var circle = document.getElementsByClassName("setting-notification-alarm");
+    for (let i = 0; i < circle.length; i++) {
+        circle[i].style.display = `flex`;
+    }
+}
 
 
 
@@ -625,10 +634,7 @@ function isVerified() {
     document.getElementById("menu-option-right-1").innerHTML = `
         <img src="svg/verifiedtick.svg" class="img-fluid"></img>
     `;
-    document.getElementById("menuNotifyDisplay").style.display = "flex";
-    document.getElementById("settingNotifyDisplay").style.display = "flex";
-    document.getElementById("settingCommunityDisplay").style.display = "flex";
-    document.getElementById("onlineChatDisplay").style.display = "flex";
+    menucirlenotification();
     document.getElementById("menu-option-right-2").innerHTML = `
         <div class="menu-option-img">
             <img src="svg/verifiedtick.svg" class="img-fluid">
@@ -989,10 +995,7 @@ function isUnverified() {
     document.getElementById("menu-option-right-1").innerHTML = `
         <img src="svg/unverifiedtick.svg" class="img-fluid"></img>
     `;
-    document.getElementById("menuNotifyDisplay").style.display = "flex";
-    document.getElementById("settingNotifyDisplay").style.display = "flex";
-    document.getElementById("settingCommunityDisplay").style.display = "flex";
-    document.getElementById("onlineChatDisplay").style.display = "flex";
+    menucirlenotification();
     document.getElementById("menu-option-right-2").innerHTML = `
         <div class="menu-option-img">
             <img src="svg/unverifiedtick.svg" class="img-fluid">

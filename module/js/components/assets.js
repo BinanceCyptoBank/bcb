@@ -11,7 +11,7 @@ class Assets extends HTMLElement{
                             <div class="container">
                                 <!-- Assets link container-->
                                 <div class="assets-header-link-wrap" id="assets-header-link-wrapper">
-                                    <div class="help-header-img asset-visi">
+                                    <div class="help-header-img asset-visi" id="assets-back-svg-btn">
                                         <img src="svg/backarrowb.svg" class="img-fluid">
                                     </div>
                                     <div class="help-header-img-right" id="language-index">

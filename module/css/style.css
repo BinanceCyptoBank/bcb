@@ -284,6 +284,7 @@
     }
     html{
         min-height: 100%;
+        overflow: hidden;
         min-width: 100%;
     }
     body{
@@ -2485,6 +2486,7 @@
     }
     .setting-notification-alarm{
         position: absolute;
+        display: none;
         border-radius: 50%;
         height: 0.6em;
         top: 0.15em;
@@ -4641,11 +4643,9 @@
     }
     #settingNotifyDisplay{
         background: #e7281a;
-        display: none;
     }
     #settingCommunityDisplay{
         background: #4bb543;
-        display: none;
     }
     #onlineChatDisplay{
         display: none;
@@ -5173,7 +5173,7 @@
         height: 1em;
         margin: 0px;
         margin-left: 0.375em;
-        width: 1cqw;
+        width: 1em;
     }
     .message {
         color: #000;

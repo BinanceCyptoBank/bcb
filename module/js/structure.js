@@ -281,13 +281,13 @@
         function communityInterval() {
             setTimeout(function(){
                 scrollChatButton();
-            }, 200);
+            }, 50);
         }
 
         function commentInterval() {
             setTimeout(function(){
                 scrollCommentButton();
-            }, 200);
+            }, 50);
         }
         // -------------------- 
     //  -------------------- -------------------- -------------------- 
@@ -1568,18 +1568,10 @@
                         isUnverifiedMenu()
                     };
                 }isVerificationMenu();
-
-                document.getElementById("assets-header-link-wrapper").innerHTML = `
-                    <div class="help-header-img asset-visi" onclick="MenuToHome()">
-                        <img src="svg/backarrowb.svg" class="img-fluid">
-                    </div>
-                    <div class="help-header-img" id="language-index" onclick="AssetsToLanguage()">
-                        <img src="svg/globe.svg" class="img-fluid">
-                    </div>
-                `;
-
                 
                 document.getElementById("assets-card-btn-id").onclick = function() { AssetsToProfileMen() }
+                document.getElementById("assets-back-svg-btn").onclick = function() { MenuToHome() }
+                document.getElementById("language-index").onclick = function() { AssetsToLanguage() }
             };
         // --------------------
         
@@ -1935,11 +1927,12 @@
 
                 
                 document.getElementById("asset-help-left-container").innerHTML = `
-                    <div class="help-header-img btn-display-clone" onclick="BackToHome()">
+                    <div class="help-header-img btn-display-clone" onclick="MenuToHome()">
                         <img src="svg/arrowleft.svg" class="img-fluid">
                     </div>
                     <span class="help-header-txt">Langage</span>
                 `;
+                document.getElementById("asset-help-left-container").onclick = function() { MenuToHome() }
             };
         // -------------------- 
         
@@ -2630,14 +2623,8 @@
                         isUnverifiedMenu()
                     };
                 }isVerificationMenu();
-
                 
-                document.getElementById("asset-help-left-container").innerHTML = `
-                    <div class="help-header-img btn-display-clone" onclick="MenuToAssets()">
-                        <img src="svg/arrowleft.svg" class="img-fluid">
-                    </div>
-                    <span class="help-header-txt">Langage</span>
-                `;
+                document.getElementById("asset-help-left-container").onclick = function() { MenuToAssets() }
             };
         // -------------------- 
     //  -------------------- -------------------- -------------------- 
@@ -3082,16 +3069,8 @@
                 invite.style.display = "none";
                 refhis.style.display = "none";
 
-                document.getElementById("assets-header-link-wrapper").innerHTML = `
-                    <div class="help-header-img asset-visi" onclick="HomeToSettings()">
-                        <img src="svg/backarrowb.svg" class="img-fluid">
-                    </div>
-                    <div class="help-header-img" id="language-index" onclick="MenuToLanguage()">
-                        <img src="svg/globe.svg" class="img-fluid">
-                    </div>
-                `;
-
                 document.getElementById("assets-card-btn-id").onclick = function() { AssetsToProfileSet() }
+                document.getElementById("assets-back-svg-btn").onclick = function() { HomeToSettings() }
                 document.getElementById("language-index").onclick = function() { SettingToLanguage() }
             };
         // -------------------- 
@@ -3279,20 +3258,13 @@
                 userinfoslide.style.display = "flex"; // -------------------- Container -------------------- 
                 invite.style.display = "none";
                 refhis.style.display = "none";
-
-                document.getElementById("assets-header-link-wrapper").innerHTML = `
-                    <div class="help-header-img asset-visi" onclick="HomeToSettings()">
-                        <img src="svg/backarrowb.svg" class="img-fluid">
-                    </div>
-                    <div class="help-header-img" id="language-index" onclick="MenuToLanguage()">
-                        <img src="svg/globe.svg" class="img-fluid">
-                    </div>
-                `;
                 
                 document.getElementById("user-info-removebtn").onclick = function() { HomeToSettings() };
                 document.getElementById("user-exit-btn").onclick = function() { HomeToSettings() };
                 document.getElementById("userinfoslide-btn").onclick = function() { SettingToAsset() };
                 document.getElementById("userinfoslide-btn").style.display = "flex";
+                document.getElementById("assets-back-svg-btn").onclick = function() { HomeToSettings() }
+                document.getElementById("language-index").onclick = function() { SettingToLanguage() }
             };
 
         // -------------------- //  
@@ -3340,20 +3312,13 @@
                 userinfoslide.style.display = "flex"; // -------------------- Container -------------------- 
                 invite.style.display = "none";
                 refhis.style.display = "none";
-
-                document.getElementById("assets-header-link-wrapper").innerHTML = `
-                    <div class="help-header-img asset-visi" onclick="HomeToSettings()">
-                        <img src="svg/backarrowb.svg" class="img-fluid">
-                    </div>
-                    <div class="help-header-img" id="language-index" onclick="MenuToLanguage()">
-                        <img src="svg/globe.svg" class="img-fluid">
-                    </div>
-                `;
                 
                 document.getElementById("user-info-removebtn").onclick = function() { HomeToSettings() }
                 document.getElementById("user-exit-btn").onclick = function() { HomeToSettings() }
                 document.getElementById("userinfoslide-btn").onclick = function() { SettingToAsset() };
                 document.getElementById("userinfoslide-btn").style.display = "flex";
+                document.getElementById("assets-back-svg-btn").onclick = function() { HomeToSettings() }
+                document.getElementById("language-index").onclick = function() { SettingToLanguage() }
             };
         // -------------------- 
     
