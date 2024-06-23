@@ -282,12 +282,16 @@
         padding: 0px;
         position: relative;
     }
+    html{
+        min-height: 100%;
+        min-width: 100%;
+    }
     body{
         font-family: font-fam;
         touch-action: pan-y;
         user-select: none;
+        position: absolute;
         overflow-x: hidden;
-        height: auto;
     }
     .parent-container{
         height: 100vh;
@@ -1414,6 +1418,13 @@
         height: 1.55em;
         justify-content: center;
         margin-right: 1.8em;
+        width: 1.55em;
+    }
+    .community-header-img {
+        align-items: center;
+        cursor: pointer;
+        height: 1.55em;
+        justify-content: center;
         width: 1.55em;
     }
     .help-header-img-right {
@@ -4836,7 +4847,7 @@
         float: right;
         padding: 0.15em 0 0 7px;
         position: relative;
-        font-size: var(--fontsize-0-8);
+        font-size: var(--fontsize-0-75);
         color: rgba(0, 0, 0, .65);
     }
     .comm-post .metadata {
@@ -5146,6 +5157,24 @@
         position: relative;
         width: 2.25em;
     }
+    .admin-message-username {
+        align-items: center;
+        background: var(--dark-background);
+        border-radius: 50%;
+        display: flex;
+        height: 2.25em;
+        padding: 0.375em;
+        justify-content: center;
+        margin-right: 1em;
+        position: relative;
+        width: 2.25em;
+    }
+    .admin-blue-tick{
+        height: 1em;
+        margin: 0px;
+        margin-left: 0.375em;
+        width: 1cqw;
+    }
     .message {
         color: #000;
         line-height: 12.5px;
@@ -5217,6 +5246,15 @@
         padding-top: 0.75em;
         line-height: 0;
     }
+    .admin-message-username-txt {
+        align-items: center;
+        display: flex;
+        font-size: var(--fontsize-0-8);
+        font-weight: var(--large-font);
+        padding-top: 0.25em;
+        margin-bottom: 0.75em;
+        line-height: 0;
+    }
     .time-other{
         color: rgba(0, 0, 0, 0.5);
     }
@@ -5238,6 +5276,9 @@
 		word-wrap: break-word;
 	}
     .message-username-comment {
+        padding-right: 1em;
+    }
+    .admin-message-username-comment {
         padding-right: 1em;
     }
     /* -------------------- */
@@ -5401,9 +5442,9 @@
         position: fixed;
         flex-direction: column;
         border-radius: 50%;
-        height: 3.5em;
-        padding: 0.125em;
-        width: 3.5em;
+        height: 2.75em;
+        padding: 0.0935em;
+        width: 2.75em;
     }
     #scroll-chat-button{
         z-index: 1;

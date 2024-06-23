@@ -1946,31 +1946,15 @@ function intervalTiming() {
                 // Comment Loop
                 var commentPrint = "";
                 for (let i in commentDatabase) {
-                    if(commentDatabase[i].commentid === userUid){
-                        commentPrint += `
-                            <div class="conversation-container comment-client-display float-right" id="${commentDatabase[i].date}">
-                                <div class="message sent">
-                                    <div class="client-option-con"><div class="client-option-img" onclick="displayClientOption(this)" data-comment-id="${i}"><img src="svg/dotsb.svg" class="img-fluid"></div></div>
-                                    <span class="message-username-comment">${commentDatabase[i].comment}</span>
-                                    <div class="metadata"><span class="time time-other one-line">${getTimeFormat(getNthWord(commentDatabase[i].date, 4))}</span></div>
-                                </div>
-                            </div>
-                            
-                            <div class="comment-post-date-con hide-date-display comment-client-datedisplay ${dateClass(`${commentDatabase[i].date}`)}clientcomm" id="${commentDatabase[i].date}">
-                                <div class="comment-post-date-line"></div>
-                                <div class="comment-post-date">${getNthWord(commentDatabase[i].date, 2).slice(0, -1)} · ${getNthWord(commentDatabase[i].date, 1)}</div>
-                                <div class="comment-post-date-line"></div>
-                            </div>
-                        `;
-                    } else if(commentDatabase[i].commentid !== userUid){
+                    if(commentDatabase[i].commentid === `dQvWAvA24lQmOJy3AJg4byBDaR23`){
                         commentPrint += `
                             <div class="conversation-container comment-client-display float-left" id="${commentDatabase[i].date}">
                                 <div class="message-chat-wrap">
                                     <!-- Img -->
-                                    <div><div class="message-username" style="background: ${user[commentDatabase[i].commentid].color};">${user[commentDatabase[i].commentid].name.at(0)}</div></div>
+                                    <div><div class="admin-message-username"><img src="svg/binance.svg" class="img-fluid"></div></div>
                                     <div class="message received">
-                                        <p class="message-username-txt">${user[commentDatabase[i].commentid].name}</p>
-                                        <span class="message-username-comment">${commentDatabase[i].comment}</span>
+                                        <span class="admin-message-username-txt">${user[commentDatabase[i].commentid].name} <img src="svg/bluetick.svg" class="admin-blue-tick"></span>
+                                        <span class="admin-message-username-comment">${commentDatabase[i].comment}</span>
                                         <div class="metadata"><span class="time one-line">${getTimeFormat(getNthWord(commentDatabase[i].date, 4))}</span></div>
                                     </div>
                                 </div>
@@ -1982,6 +1966,64 @@ function intervalTiming() {
                                 <div class="comment-post-date-line"></div>
                             </div>
                         `;
+                    } else {
+                        if(commentDatabase[i].commentid === userUid){
+                            commentPrint += `
+                                <div class="conversation-container client-comment-client-display float-right" id="${commentDatabase[i].date}">
+                                    <div class="message sent">
+                                        <div class="client-option-con"><div class="client-option-img" onclick="displayClientOption(this)" data-comment-id="${i}"><img src="svg/dotsb.svg" class="img-fluid"></div></div>
+                                        <span class="message-username-comment">${commentDatabase[i].comment}</span>
+                                        <div class="metadata"><span class="time time-other one-line">${getTimeFormat(getNthWord(commentDatabase[i].date, 4))}</span></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="comment-post-date-con hide-date-display comment-client-datedisplay ${dateClass(`${commentDatabase[i].date}`)}clientcomm" id="${commentDatabase[i].date}">
+                                    <div class="comment-post-date-line"></div>
+                                    <div class="comment-post-date">${getNthWord(commentDatabase[i].date, 2).slice(0, -1)} · ${getNthWord(commentDatabase[i].date, 1)}</div>
+                                    <div class="comment-post-date-line"></div>
+                                </div>
+                            `;
+                        } else if(commentDatabase[i].commentid !== userUid){
+                            commentPrint += `
+                                <div class="conversation-container comment-client-display float-left" id="${commentDatabase[i].date}">
+                                    <div class="message-chat-wrap">
+                                        <!-- Img -->
+                                        <div><div class="message-username" style="background: ${user[commentDatabase[i].commentid].color};">${user[commentDatabase[i].commentid].name.at(0)}</div></div>
+                                        <div class="message received">
+                                            <p class="message-username-txt">${user[commentDatabase[i].commentid].name}</p>
+                                            <span class="message-username-comment">${commentDatabase[i].comment}</span>
+                                            <div class="metadata"><span class="time one-line">${getTimeFormat(getNthWord(commentDatabase[i].date, 4))}</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="comment-post-date-con hide-date-display comment-client-datedisplay ${dateClass(`${commentDatabase[i].date}`)}clientcomm" id="${commentDatabase[i].date}">
+                                    <div class="comment-post-date-line"></div>
+                                    <div class="comment-post-date">${getNthWord(commentDatabase[i].date, 2).slice(0, -1)} · ${getNthWord(commentDatabase[i].date, 1)}</div>
+                                    <div class="comment-post-date-line"></div>
+                                </div>
+                            `;
+                        } else{
+                            commentPrint += `
+                                <div class="conversation-container comment-client-display float-left" id="${commentDatabase[i].date}">
+                                    <div class="message-chat-wrap">
+                                        <!-- Img -->
+                                        <div><div class="message-username" style="background: ${user[commentDatabase[i].commentid].color};">${user[commentDatabase[i].commentid].name.at(0)}</div></div>
+                                        <div class="message received">
+                                            <p class="message-username-txt">${user[commentDatabase[i].commentid].name}</p>
+                                            <span class="message-username-comment">${commentDatabase[i].comment}</span>
+                                            <div class="metadata"><span class="time one-line">${getTimeFormat(getNthWord(commentDatabase[i].date, 4))}</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="comment-post-date-con hide-date-display comment-client-datedisplay ${dateClass(`${commentDatabase[i].date}`)}clientcomm" id="${commentDatabase[i].date}">
+                                    <div class="comment-post-date-line"></div>
+                                    <div class="comment-post-date">${getNthWord(commentDatabase[i].date, 2).slice(0, -1)} · ${getNthWord(commentDatabase[i].date, 1)}</div>
+                                    <div class="comment-post-date-line"></div>
+                                </div>
+                            `;
+                        }
                     }
                 }
                 // // 
@@ -2024,9 +2066,21 @@ function intervalTiming() {
                     chatDisplay[i].style.display = "none"
                 }
             }
+            var clientChatDisplay = document.getElementsByClassName("client-comment-client-display");
+            for (let i = 0; i < clientChatDisplay.length; i++) {
+                const element = clientChatDisplay[i].id;
+                var currentDate = new Date();
+                var expiry = new Date(`${element}`);
+                if (currentDate.getTime() >= expiry.getTime()) {
+                    clientChatDisplay[i].style.display = "flex";
+                } else if (currentDate.getTime() < expiry.getTime()) {
+                    clientChatDisplay[i].style.display = "none"
+                }
+            }
+            var clientCommentCount = clientChatDisplay.length;
             var commentCount = document.getElementsByClassName("comment-count-class").length;
-            document.getElementById("comment-count-number").innerHTML = `${nFormatter(Number(commentCount))}`;
-            var viewNumber = Number(commentCount) * Number(numberViews);
+            document.getElementById("comment-count-number").innerHTML = `${nFormatter(Number(commentCount) + Number(clientCommentCount))}`;
+            var viewNumber = (Number(commentCount) * Number(numberViews)) + Number(clientCommentCount);
             if(commentCount === 0){
                 document.getElementById("bio-auth-conversation-container").innerHTML = `
                     <div class="hmepg-token-img-txt one-line">No comments on this post yet.</div>
@@ -2068,9 +2122,21 @@ function intervalTiming() {
                         chatDisplay[i].style.display = "none"
                     }
                 }
+                var clientChatDisplay = document.getElementsByClassName("client-comment-client-display");
+                for (let i = 0; i < clientChatDisplay.length; i++) {
+                    const element = clientChatDisplay[i].id;
+                    var currentDate = new Date();
+                    var expiry = new Date(`${element}`);
+                    if (currentDate.getTime() >= expiry.getTime()) {
+                        clientChatDisplay[i].style.display = "flex";
+                    } else if (currentDate.getTime() < expiry.getTime()) {
+                        clientChatDisplay[i].style.display = "none"
+                    }
+                }
+                var clientCommentCount = clientChatDisplay.length;
                 var commentCount = document.getElementsByClassName("comment-count-class").length;
-                document.getElementById("comment-count-number").innerHTML = `${nFormatter(Number(commentCount))}`;
-                var viewNumber = Number(commentCount) * Number(numberViews);
+                document.getElementById("comment-count-number").innerHTML = `${nFormatter(Number(commentCount) + Number(clientCommentCount))}`;
+                var viewNumber = (Number(commentCount) * Number(numberViews)) + Number(clientCommentCount);
                 if(commentCount === 0){
                     document.getElementById("bio-auth-conversation-container").innerHTML = `
                         <div class="hmepg-token-img-txt one-line">No comments on this post yet.</div>

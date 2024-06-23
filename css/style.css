@@ -156,12 +156,17 @@
         padding: 0px;
         position: relative;
     }
+    html{
+        min-height: 100%;
+        min-width: 100%;
+    }
     body {
-        height: 100vh;
+        height: 100%;
+        width: 100%;
+        position: absolute;
         overflow-x: hidden;
         touch-action: pan-y;
         user-select: none;
-        width: 100vw;
     }
     .header-nav{position:fixed;}
     .header-nav {

@@ -16,8 +16,8 @@
         }
         body{
             min-height: 100%;
-            position: relative;
-            min-width: 100%;
+            position: fixed;
+            width: 100vw;
         }
         /* Customized container */
         .custom-row{
@@ -632,6 +632,9 @@
                         right: 5%;
                         bottom: 5em;
                     }
+                    .community-header-img {
+                        margin-right: 1.1.25em;
+                    }
                     /* -------------------- */
                 /*  -------------------- -------------------- -------------------- */
             }
@@ -776,6 +779,9 @@
                     .scroll-chat-button {
                         right: 15%;
                         bottom: 5.5em;
+                    }
+                    .community-header-img {
+                        margin-right: 1.75em;
                     }
                     /* -------------------- */
                 /*  -------------------- -------------------- -------------------- */
@@ -948,6 +954,9 @@
                         right: 2.5%;
                         bottom: 7.5em;
                     }
+                    .community-header-img {
+                        margin-right: 1.8em;
+                    }
                     /* -------------------- */
                 /*  -------------------- -------------------- -------------------- */
             }
@@ -1100,6 +1109,9 @@
                     }
                     .pointer-event{
                         pointer-events: none;
+                    }
+                    .community-header-img {
+                        margin-right: 1.5em;
                     }
                     /* -------------------- */
                 /*  -------------------- -------------------- -------------------- */

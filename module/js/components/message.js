@@ -10,7 +10,7 @@ class Message extends HTMLElement{
                         <div class="help-header-container">
                             <!-- Left container-->
                             <div class="help-left-container">
-                                <div class="help-header-img btn-display-clone" id="community-back-btn">
+                                <div class="community-header-img btn-display-clone" id="community-back-btn">
                                     <img src="svg/arrowleft.svg" class="img-fluid">
                                 </div>
                                 <!-- Community header -->

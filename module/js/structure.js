@@ -277,6 +277,18 @@
                 settingssecond.classList.remove("page-hide");
             };
         }
+        
+        function communityInterval() {
+            setTimeout(function(){
+                scrollChatButton();
+            }, 200);
+        }
+
+        function commentInterval() {
+            setTimeout(function(){
+                scrollCommentButton();
+            }, 200);
+        }
         // -------------------- 
     //  -------------------- -------------------- -------------------- 
 // -------------------- -------------------- -------------------- -------------------- -------------------- 
@@ -941,6 +953,7 @@
         //  Home to Community page     ##### 7
             function HomeToCommunity() {
                 secondContainer();
+                communityInterval();
                 
                 //  first container
                 SettingsFirstClose(); 
@@ -3086,6 +3099,7 @@
         //  
             function SettingToCommunity() {
                 secondContainer();
+                communityInterval();
 
                 //  first container
                 SettingsFirstOpen(); 
@@ -3980,6 +3994,7 @@
         //  Home to Community page     ##### 7
         function CommunityToChat() {
             secondContainer();
+            commentInterval();
             
             //  second container
             account.style.display = "none";
