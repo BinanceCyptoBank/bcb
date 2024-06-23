@@ -5569,18 +5569,3 @@
     }
     /* -------------------- */
 /* -------------------- -------------------- -------------------- -------------------- -------------------- */
-
-
-
-
-
-
-/* ADMIN PAGE */
-#admin-post-page {
-    display: flex;
-    overflow: hidden;
-}
-#admin-comment-page {
-    display: none;
-    overflow: hidden;
-}

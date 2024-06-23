@@ -2155,6 +2155,7 @@ function intervalTiming() {
             }, 1000);
             
             CommunityToChat();
+            exitClientCommentBtn();
         }
     // -------------------- --------------------  --------------------
 
@@ -2190,6 +2191,11 @@ function intervalTiming() {
             document.getElementById("client-edit-comment-input-style").value = `${user.comment}`;
         })
         document.getElementById("client-comment-notify").style.display = "none";
+
+        // 
+        setTimeout(function(){
+            exitClientCommentBtn()
+        }, 17500);
     }
     function exitClientCommentBtn() {
         document.getElementById("main-comment-post").style.display ="flex";
