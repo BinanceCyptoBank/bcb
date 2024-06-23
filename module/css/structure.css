@@ -16,7 +16,6 @@
         }
         body{
             min-height: 100%;
-            position: fixed;
             width: 100vw;
         }
         /* Customized container */

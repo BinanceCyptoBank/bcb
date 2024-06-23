@@ -283,9 +283,8 @@
         position: relative;
     }
     html{
-        min-height: 100%;
         overflow: hidden;
-        min-width: 100%;
+        min-width: 100vw;
     }
     body{
         font-family: font-fam;
@@ -5159,11 +5158,11 @@
     }
     .admin-message-username {
         align-items: center;
-        background: var(--dark-background);
+        background: var(--black-background);
         border-radius: 50%;
         display: flex;
         height: 2.25em;
-        padding: 0.375em;
+        padding: 0.4em;
         justify-content: center;
         margin-right: 1em;
         position: relative;
